@@ -3,7 +3,7 @@
 # c22-34-n-data-bi
 # Análisis de Tráfico - Sistema de Transporte de Pasajeros
 
-<p align=center><img src=sup.jpg width=900px heigth=100px><p>
+<p align=center><img src=SRC/img/sup.jpg width=900px heigth=100px><p>
 
 
 
@@ -137,5 +137,5 @@ El estado del proyecto esta en una fase ......
 </html>
 
 <p align="center">
-  <img src="inf.jpg" width="900px" height="200px">
+  <img src="SRC/img/inf.jpg" width="900px" height="200px">
 </p>
