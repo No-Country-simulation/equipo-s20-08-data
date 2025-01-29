@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fraud Detection Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+    .grid-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .card-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .badge {
+      padding: 5px 10px;
+      color: #fff;
+      border-radius: 3px;
+    }
+    .badge.fraudulent {
+      background-color: #e53e3e;
+    }
+    .badge.legitimate {
+      background-color: #38a169;
+    }
+    .chart {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ccc;
+    }
+    .transaction {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid grid-cols-3">
+      <div class="card">
+        <div class="card-title">Total de Transacciones</div>
+        <div id="total-transactions" class="value">0</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Fraude</div>
+        <div id="fraudulent-transactions" class="value">0</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Legítimo</div>
+        <div id="legitimate-transactions" class="value">0</div>
+      </div>
+    </div>
+
+    <div class="card" id="current-transaction-card" style="display: none;">
+      <div class="card-title">Últimas Transacciones</div>
+      <div id="current-transaction"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Cronología de Puntuación de Riesgo</div>
+      <div class="chart" id="risk-score-chart"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Transacciones Recientes</div>
+      <div id="recent-transactions"></div>
+    </div>
+  </div>
+
+  <script>
+    let transactions = [];
+    let stats = {
+      totalTransactions: 0,
+      fraudulent: 0,
+      legitimate: 0,
+    };
+
+    function generateTransaction() {
+      const amount = (Math.random() * 1000).toFixed(2);
+      const isFraud = Math.random() > 0.92;
+      return {
+        id: Date.now(),
+        timestamp: new Date().toLocaleTimeString(),
+        amount: amount,
+        merchant: `Comerciante-${Math.floor(Math.random() * 100)}`,
+        isFraud,
+        risk_score: isFraud ? (0.7 + Math.random() * 0.3).toFixed(2) : (Math.random() * 0.3).toFixed(2),
+      };
+    }
+
+    function updateStats(transaction) {
+      stats.totalTransactions++;
+      if (transaction.isFraud) {
+        stats.fraudulent++;
+      } else {
+        stats.legitimate++;
+      }
+      document.getElementById('total-transactions').innerText = stats.totalTransactions;
+      document.getElementById('fraudulent-transactions').innerText = stats.fraudulent;
+      document.getElementById('legitimate-transactions').innerText = stats.legitimate;
+    }
+
+    function renderCurrentTransaction(transaction) {
+      const card = document.getElementById('current-transaction-card');
+      card.style.display = 'block';
+      const content = `
+        <div>Monto: $${transaction.amount}</div>
+        <div>Comerciante: ${transaction.merchant}</div>
+        <div>Puntuación de Riesgo: ${transaction.risk_score}</div>
+        <div>Hora: ${transaction.timestamp}</div>
+        <div class="badge ${transaction.isFraud ? 'fraudulent' : 'legitimate'}">
+          ${transaction.isFraud ? 'Fraudulenta' : 'Legítima'}
+        </div>
+      `;
+      document.getElementById('current-transaction').innerHTML = content;
+    }
+
+    function renderRecentTransactions() {
+      const container = document.getElementById('recent-transactions');
+      container.innerHTML = '';
+      transactions.slice(-5).reverse().forEach(transaction => {
+        const div = document.createElement('div');
+        div.className = 'transaction';
+        div.innerHTML = `
+          <div>
+            <span>$${transaction.amount}</span> - <span>${transaction.merchant}</span>
+          </div>
+          <div>${transaction.timestamp}</div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    setInterval(() => {
+      const newTransaction = generateTransaction();
+      transactions.push(newTransaction);
+      updateStats(newTransaction);
+      renderCurrentTransaction(newTransaction);
+      renderRecentTransactions();
+    }, 2000);
+  </script>
+</body>
+</html>
+
