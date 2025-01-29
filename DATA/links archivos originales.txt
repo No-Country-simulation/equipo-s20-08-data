@@ -1,0 +1,11 @@
+generar estructura de datos correcta
+
+
+link kaggle
+https://www.kaggle.com/datasets/orogunadebola/credit-card-transaction-dataset-fraud-detection
+
+
+link csv reducido
+https://drive.google.com/file/d/1dZVXkrYq6iexYq2fpcXub3GpA5CslH_A/view?usp=sharing
+
+
