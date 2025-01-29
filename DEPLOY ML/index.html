@@ -6,22 +6,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fraud Detection Demo</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #161616;
+        font-weight: bold;
+        
+
+      }
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
+      .grid {
+        display: grid;
+        gap: 18px; /* Aplica espaciado tanto horizontal como vertical */
+      }
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .card {
+        position: relative; /* Necesario para posicionar elementos hijos con posición absoluta */
+        border: 1px solid #e0e7ff;
+        border-radius: 8px;
+        padding: 16px;
+        margin-top: 20px;
+        background-color: #f8fafc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-title {
+        font-size: 1em;
+        font-weight: bold;
+        display: flex;
+        align-items: center; /* Centra verticalmente el texto e ícono */
+        gap: 4px; /* Añade espacio entre el ícono y el texto */
+      }
+
+      .icon {
+          font-size: 1em; /* Ajusta el tamaño del ícono si es necesario */
+          display: inline-block; /* Asegura que el ícono sea tratado como un elemento en línea */
+      }
+      .icon2 {
+          font-size: 1em; /* Ajusta el tamaño del ícono si es necesario */
+          display: inline-block; /* Asegura que el ícono sea tratado como un elemento en línea */
+          color: blue;
+      }
+      .icon3 {
+          font-size: 1em; /* Ajusta el tamaño del ícono si es necesario */
+          display: inline-block; /* Asegura que el ícono sea tratado como un elemento en línea */
+          color: red;
+      }
+      .icon4 {
+          font-size: 1em; /* Ajusta el tamaño del ícono si es necesario */
+          display: inline-block; /* Asegura que el ícono sea tratado como un elemento en línea */
+          color: green;
+      }
+
+      .transaction-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+      }
+
+      .transaction-detail .label {
+          font-size: 0.9em;
+          color: #4a5568;
+      }
+
+      .transaction-detail .value {
+          font-size: 1.2em;
+          font-weight: bold;
+      }
+
+      .badge {
+          position: absolute; /* Posiciona la badge dentro de la tarjeta */
+          top: 16px; /* Alinea verticalmente con el padding de la tarjeta */
+          right: 16px; /* Alinea horizontalmente con el padding de la tarjeta */
+          padding: 4px 12px;
+          border-radius: 12px;
+          font-size: 0.9em;
+          font-weight: bold;
+          display: inline-block;
+          white-space: nowrap; /* Evita que el texto se desborde a la siguiente línea */
+      }
+
+      .badge.fraudulent {
+          background-color: #fed7d7;
+          color: #c53030;
+      }
+
+      .badge.legitimate {
+          background-color: #c6f6d5;
+          color: #2f855a;
+      }
+      .chart {
+        width: 100%;
+        height: 300px;
+        border: 1px solid #ccc;
+      }
+      .transaction {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .value {
+      font-size: 2em; /* Ajusta el tamaño si es necesario */
+      font-weight: bold;
+      }
+      .blue {
+        color: blue; /* Azul para valores neutrales */
+      }
+      .red {
+        color: red; /* Rojo para valores de fraude */
+      }
+      .green {
+        color: green; /* Verde para valores legítimos */
+      }
+    </style>
     
 </head>
 <body>
   
 <div class="container">
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <h1>Detección de Fraude LightGBM</h1>
-    <h2 style="color: black; display: flex; align-items: center;">
-        <i class="fas fa-brain" style="margin-right: 8px;"></i> <!-- Icono de ML -->
-        Precisión 93.13%
-    </h2>
-  </div>
+  <h1>Detección de Fraude LightGBM</h1>
   <div class="grid grid-cols-3">
     <div class="card">
       <div class="card-title">
@@ -64,21 +185,10 @@
       </div>
     </div>
 
-    <div class="bg-white">
-      <h2 class="card-title">Transacciones Recientes</h2>
-      <table>
-          <thead>
-              <tr>
-                  <th>ID Transacción</th>
-                  <th>Comercio</th>
-                  <th>Monto</th>
-                  <th>Estado</th>
-                  <th>Hora</th>                  
-              </tr>
-          </thead>
-          <tbody id="transactions-table-body"></tbody>
-      </table>
-  </div>
+    <div class="card">
+      <div class="card-title">Transacciones Recientes</div>
+      <div id="recent-transactions"></div>
+    </div>
   </div>
 
     <script>
@@ -150,7 +260,7 @@
                     </div>
                     <div class="transaction-detail">
                         <div class="label">Nombre del Comercio</div>
-                        <div class="value">${transaction.merchant.replace(/^fraud_/, '')}</div>
+                        <div class="value">${transaction.merchant}</div>
                     </div>
                     <div class="transaction-detail">
                         <div class="label">Monto promedio del cliente en 30 días</div>
@@ -170,35 +280,20 @@
         }
 
         function renderRecentTransactions() {
-            const tableBody = document.getElementById('transactions-table-body');
-            tableBody.innerHTML = '';
-            
-            transactions
-                .slice(-5)
-                .forEach(transaction => {
-                    const row = document.createElement('tr');
-                    
-                    // Determina el ícono que se mostrará basado en si es fraude o legítima
-                    const statusIcon = transaction.isFraud 
-                        ? '<i class="fas fa-exclamation-triangle" style="color: red;"></i>'  // ícono de riesgo (rojo)
-                        : '<i class="fas fa-shield" style="color: green;"></i>';       // ícono de escudo (verde)
-                    // Icono de ubicación
-                    const locationIcon = transaction.isFraud
-                        ? '<i class="fas fa-map-marker-alt" style="color: red;"></i>'
-                        : '<i class="fas fa-map-marker-alt" style="color: green;"></i>';
-                    
-                    row.innerHTML = `
-                        <td>${statusIcon} ${transaction.id || 'N/A'}</td>
-                        <td>${transaction.merchant.replace(/^fraud_/, '') || 'N/A'}</td>
-                        <td>$${(transaction.amount || 0).toLocaleString()}</td>
-                        <td>${locationIcon} ${transaction.ciudad}</td>
-                        <td>${transaction.timestamp || 'N/A'}</td>
-                    `;
-                    
-                    tableBody.appendChild(row);
-                });
+            const container = document.getElementById('recent-transactions');
+            container.innerHTML = '';
+            transactions.slice(-5).reverse().forEach(transaction => {
+                const div = document.createElement('div');
+                div.className = 'transaction';
+                div.innerHTML = `
+                    <div>
+                        <span>$${transaction.amount}</span> - <span>Transacción realizada en ${transaction.merchant}</span> - <span>Ciudad de ${transaction.ciudad}</span>
+                    </div>
+                    <div>${transaction.timestamp}</div>
+                `;
+                container.appendChild(div);
+            });
         }
-
 
         // Función para añadir un marcador con un color personalizado usando divIcon
         function addMarker(lat, lon) {
@@ -216,7 +311,7 @@
         function createFraudCategoriesChart() {
             const ctx = document.getElementById('fraud-categories-chart').getContext('2d');
             const categories = [
-                'entertainment', 
+                'Entretenimiento', 
                 'food_dining', 
                 'gas_transport', 
                 'grocery_net', 
@@ -299,9 +394,4 @@
 
     </script>
 </body>
-<footer>
-  <div class="container">
-    <p></p>
-  </div>
-</footer>
 </html>
