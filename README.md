@@ -1,6 +1,6 @@
 ### Detección de Fraude en Transacciones Financieras: Un Enfoque Basado en Análiis de Datos y Machine Learning
 ### Análisis Financiero - Sistema de Deteccion de Fraudes 
-<p align=center><img src=sup.jpg width=900px heigth=100px><p>
+<p align=center><img src=SRC/img/sup.jpg width=900px heigth=100px><p>
 
 
 
