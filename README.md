@@ -39,7 +39,7 @@
 
 ## Metodologia 📖
 
-Puedes encontrar mucho más sobre la gestión de este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/metodologia.md)
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Metodología](https://github.com/tu/proyecto/DOC/metodologia.md)
 
 
 ## 📖 Descripción del Proyecto
