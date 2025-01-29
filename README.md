@@ -39,7 +39,7 @@
 
 ## Metodologia 📖
 
-Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Metodología](https://github.com/tu/proyecto/DOC/metodologia.md)
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Metodología](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/metodologia.md)
 
 
 ## 📖 Descripción del Proyecto
