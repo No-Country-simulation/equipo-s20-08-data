@@ -134,8 +134,9 @@ El análisis de los datos EDA, se implementa mediante un script en lenguaje pyth
 - Análisis Bivariado
 - Análisis de Tendencias
 - Correlación de variables
-<br>
-Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Metodología](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/InformeEDA.md)
+<br><br>
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Informe EDA](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/InformeEDA.md)
+
 
 ## ➡️Resultados Esperados - Machine Learning
 
