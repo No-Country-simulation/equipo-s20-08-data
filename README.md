@@ -83,14 +83,7 @@ Este proyecto tiene como objetivo desarrollar un sistema de detección de fraude
 - Reuniones: ![Google Meet](https://img.shields.io/badge/Google%20Meet-00897B?logo=google-meet&logoColor=white)
 - Recursos Compartidos:![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?logo=google-drive&logoColor=white)
 
- **Power BI:** Visualización de Datos. 
-- **Streamlit:**  Plataforma para la creación de aplicaciones web interactivas a partir de scripts de Python. 
-- **Trello:** Herramienta de Gestión de Proyectos 
-- **GitHub y Colab:** Desarrollo Colaborativo y Control de Versiones. 
-- **Slack:** Comunicación diaria del equipo y colaboración en tiempo real.
-- **Google Meet:** Reuniones diarias, planificación de sprint y coordinación de trabajo.
-- **WhatsApp:** Comunicación instantánea para cuestiones urgentes.
-- **Google Drive:** Almacenamiento y sincronización de documentación.
+ 
 
 
 
@@ -141,6 +134,8 @@ El análisis de los datos EDA, se implementa mediante un script en lenguaje pyth
 - Análisis Bivariado
 - Análisis de Tendencias
 - Correlación de variables
+<br>
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Metodología](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/InformeEDA.md)
 
 ## ➡️Resultados Esperados - Machine Learning
 
