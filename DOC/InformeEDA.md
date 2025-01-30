@@ -55,20 +55,20 @@ Para mejorar la comprensión de los datos y los hallazgos, se pueden incluir las
 <b>Gráficos de barras:<br></b>
 <b>Distribución de transacciones fraudulentas por categoría:</b>
 <br><br>--imagen--<br><br>
-<p align=center><img src=SRC/EDA/unoEDA.png width=300px heigth=300px><p>
+<p align=center><img src=../SRC/EDA/unoEDA.png width=600px heigth=600px><p>
 
 <b>Número de transacciones fraudulentas por hora del día:</b>
 <br><br>--imagen--<br><br>
-<p align=center><img src=SRC/EDA/dosEDA.png width=300px heigth=300px><p>
+<p align=center><img src=../SRC/EDA/dosEDA.png width=600px heigth=600px><p>
 <b>Gráficos de dispersión:</b>
 <br><br>--imagen--<br><br>
-<p align=center><img src=SRC/EDA/tresEDA.png width=300px heigth=300px><p>
+<p align=center><img src=../SRC/EDA/tresEDA.png width=600px heigth=600px><p>
 <b>Relación entre el monto de la transacción (amt) y la probabilidad de fraude:</b>
 <br><br>--imagen--<br><br>
-<p align=center><img src=SRC/EDA/cuatroEDA.png width=300px heigth=300px><p>
+<p align=center><img src=../SRC/EDA/cuatroEDA.png width=600px heigth=600px><p>
 <b>Relación entre el riesgo del comerciante (merchant_risk_30_day) y la probabilidad de fraude:</b>
 <br><br>--imagen--<br><br>
-<p align=center><img src=../SRC/EDA/cincoEDA.png width=300px heigth=300px><p>
+<p align=center><img src=../SRC/EDA/cincoEDA.png width=600px heigth=600px><p>
 <b>Mapas de calor:</b>
 
 Correlación entre diferentes variables numéricas:</b>
