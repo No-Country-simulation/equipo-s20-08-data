@@ -39,7 +39,7 @@
 Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Metodología](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/metodologia.md)
 
 ## Esquema General de Trabajo 
-Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Esquema General de Trabajo](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/Esquema_General_de_Trabajo.md)
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Esquema General de Trabajo](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/Esquema_General_de_trabajo.md)
 
 <br> 
 
