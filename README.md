@@ -20,9 +20,6 @@
       <td><b>Luciana Melisa Rabozzi Orelo</b></td>
       <td>Data Analist</td>
      </tr>
-          <td><b>RuthPuyo</b></td>
-      <td>Data Analist</td>
-      </tr>    
       <td><b>Diego Borges</b></td>
       <td>Data Analist</td>
       </tr>    
@@ -41,6 +38,10 @@
 
 Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Metodología](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/metodologia.md)
 
+## Esquema General de Trabajo 
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Esquema General de Trabajo](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/Esquema_General_de_Trabajo.md)
+
+<br> 
 
 ## 📖 Descripción del Proyecto
 Introducción
