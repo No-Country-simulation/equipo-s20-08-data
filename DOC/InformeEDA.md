@@ -68,7 +68,7 @@ Para mejorar la comprensión de los datos y los hallazgos, se pueden incluir las
 <p align=center><img src=SRC/EDA/cuatroEDA.png width=300px heigth=300px><p>
 <b>Relación entre el riesgo del comerciante (merchant_risk_30_day) y la probabilidad de fraude:</b>
 <br><br>--imagen--<br><br>
-<p align=center><img src=SRC/EDA/cincoEDA.png width=300px heigth=300px><p>
+<p align=center><img src=../SRC/EDA/cincoEDA.png width=300px heigth=300px><p>
 <b>Mapas de calor:</b>
 
 Correlación entre diferentes variables numéricas:</b>
