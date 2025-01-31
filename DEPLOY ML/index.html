@@ -53,12 +53,12 @@
 
     <div class="grid grid-cols-2">
       <div class="card">
-        <div class="card-title">Gráfico de Transacciones Fraudulentas</div>
+        <div class="card-title">Gráfico de Transacciones Fraudulentas por categoría</div>
         <canvas id="fraud-categories-chart" class="chart" ></canvas>
 
       </div>
       <div class="card">
-        <div class="card-title">Mapa</div>
+        <div class="card-title">Mapa de Transacciones Fraudulentas (EE.UU.)</div>
         <div id="map" style="height: 400px;"></div>
 
       </div>
@@ -216,20 +216,20 @@
         function createFraudCategoriesChart() {
             const ctx = document.getElementById('fraud-categories-chart').getContext('2d');
             const categories = [
-                'entertainment', 
-                'food_dining', 
-                'gas_transport', 
-                'grocery_net', 
-                'grocery_pos', 
-                'health_fitness', 
-                'home', 
-                'kids_pets', 
-                'misc_net', 
-                'misc_pos', 
-                'personal_care', 
-                'shopping_net', 
-                'shopping_pos', 
-                'travel'
+                'Entretenimiento', 
+                'Comida y Restaurantes', 
+                'Gas y Transporte', 
+                'Supermercado (Online)', 
+                'Supermercado (Tienda Física)', 
+                'Salud y Fitness', 
+                'Hogar', 
+                'Niños y Mascotas', 
+                'Misceláneo (Online)', 
+                'Misceláneo (Tienda Física)', 
+                'Cuidado Personal', 
+                'Compras (Online)', 
+                'Compras (Tienda Física)', 
+                'Viajes'
             ];
             
 
