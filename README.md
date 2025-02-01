@@ -2,7 +2,8 @@
 ### Análisis Financiero - Sistema de Deteccion de Fraudes 
 <p align=center><img src=SRC/img/sup.jpg width=900px heigth=100px><p>
 
-
+## 📌 Introducción
+El creciente volumen de transacciones digitales ha hecho que la detección de fraudes sea un desafío cada vez mayor. Este proyecto busca desarrollar un sistema inteligente capaz de identificar y prevenir fraudes en tiempo real. Mediante el análisis de grandes volúmenes de datos históricos y la aplicación de técnicas avanzadas de machine learning, se identificarán patrones de comportamiento asociados con actividades fraudulentas. La visualización interactiva de estos patrones permitirá a los analistas comprender mejor las tácticas utilizadas por los defraudadores y desarrollar estrategias de mitigación más efectivas. El sistema resultante proporcionará una línea de defensa proactiva, protegiendo tanto a los consumidores como a las empresas.
 
 ## 📌 Integrantes
 
@@ -36,9 +37,11 @@
 
 
 ## 🎯 Objetivos
-•	Desarrollar un modelo de machine learning preciso para detectar transacciones fraudulentas.
-•	Crear un tablero interactivo en Power BI para visualizar los datos y los resultados del modelo.
-•	Desplegar el modelo en una aplicación web que permita realizar un análisis en tiempo real de una transacción.
+Presentar una solución innovadora para combatir el fraude financiero mediante la implemtación de tecnologás de machine learning y visualización de datos que permitan prevenir pérdidas económicas al identificar de manera temprana transacciones sospechosas.<br>
+Para lograr nuestro objetivos, en esta primera etapa nos abocamos a los siguientes:
+•	Desarrollar un modelo de machine learning preciso para detectar transacciones fraudulentas.<br>
+•	Crear un tablero interactivo en Power BI para visualizar los datos y los resultados del modelo.<br>
+•	Desplegar el modelo en una aplicación web que permita realizar un análisis en tiempo real de una transacción.<br>
 
 
 ## Metodologia 📖
@@ -54,7 +57,11 @@ Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [M
 
 ## Esquema General de Trabajo 
 Este documento presenta un proyecto de detección de fraudes en transacciones financieras, siguiendo rigurosamente la metodología CRISP-DM. Desde la comprensión del negocio hasta el despliegue del modelo, se detalla cada una de las fases del proyecto, ofreciendo una visión completa del proceso de desarrollo de un modelo de machine learning.<br>
-Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Esquema General de Trabajo](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/Esquema_General_de_trabajo.md)
+Puedes encontrar mucho más sobre el esquema de trabajo de este proyecto en la sección [Esquema General de Trabajo](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/Esquema_General_de_trabajo.md)
+
+## Organización  
+Este proyecto se desarrolló mediante una colaboración estrecha entre un equipo multidisciplinario. Partiendo de un planificacion detallada y el uso de las herramientas mencionadas a continuación, se logró una gestión eficiente del proyecto. El buen uso de estas herramientas fue fundamental para mantener una bitácora detallada de las actividades realizadas, los avances alcanzados y los desafíos enfrentados. 
+Puedes encontrar mucho más sobre la organización de este proyecto en la sección [Bitácora](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/bitacora.md)
 
 <br> 
 
@@ -96,25 +103,30 @@ Este proyecto tiene como objetivo desarrollar un sistema de detección de fraude
 
  
 
-### ➡️ Estructura del Proyecto
-La estructura de directorios se plantea: 
+## ➡️ Estructura del Proyecto
+Para el proyecto se presenta la siquiente estructura de directorios: 
 
     /
     │
-    ├── data/                          # Directorio principal de los datos
-    │   ├── datos iniciales/           # Referencias a distintos archivos en formato csv 
+    ├── DATA/                          # Directorio principal de los datos
+    │   ├── EDA/                       # Referencias a distintos archivos en formato csv 
     │
-    ├── directorio/                    # preprocesado de datos xlsm
+    ├── DEPLOY ML/                     # Despliegue del modelo de machine learning
     │
-    ├── codigo/                        # Cuadernos Jupyter 
-        ├── EDA.ipynb                  # Análisis exploratorio de los datos (EDA)
-        ├── visualizacion.pbix         # Visualización interactiva de los resultados (Power BI)
-        └── ml.ipynb                   # Modelado predictivo usando Machine Learning
+    ├── DOC/                           # Informes documentados
+    │                     
+    ├── EDA.ipynb                      # Análisis exploratorio de los datos (EDA)
+    │  
+    ├── MODEL ML                       # Modelado predictivo usando Machine Learning
+    │  
+    ├── TABLERO                        # Visualización interactiva de los resultados (Power BI)
+    │  
+    └── SRC                            # Imágenes utilizadas
 
 
 
 
-## ➡️Resultados Esperados - Power Bi- Looker
+## ➡️Resultados Esperados - Power Bi
 
 El análisis de los datos en Power Bi, se implementa mediante un dashboard interactivo que permite visualizar:
 
@@ -138,10 +150,10 @@ Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [I
 
 ## ➡️Resultados Esperados - Machine Learning
 
-El análisis de los datos en Power Bi, se implementa mediante un dashboard interactivo que permite visualizar:
-
-- agregar
-- agregar
+El objetivo final es desarrollar un modelo de machine learning capaz de detectar con alta precisión las transacciones fraudulentas, al tiempo que proporciona una explicación clara de las razones detrás de sus predicciones. Se espera que el modelo sea capaz de:<br>
+- Adaptarse a diferentes tipos de fraude: Identificar una amplia gama de tácticas fraudulentas. <br>
+- Reducir los falsos positivos: Minimizar las interrupciones en las transacciones legítimas. <br>
+- Mejorar continuamente: Aprender de nuevos datos y adaptarse a las evoluciones en las técnicas de fraude.<br>
 
 Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Informe ML](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/informeML.md)
 
