@@ -143,7 +143,7 @@ El análisis de los datos en Power Bi, se implementa mediante un dashboard inter
 - agregar
 - agregar
 
-Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Esquema General de Trabajo](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/informeML.md)
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Informe ML](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/informeML.md)
 
 ## 📌Referencias
 Este proyecto ha alcanzado con éxito su MVP, demostrando la viabilidad de un modelo de detección de fraudes basado en LightGBM. El tablero de Power BI proporciona una visión clara de las características clave asociadas con transacciones fraudulentas, y el modelo ha mostrado una precisión prometedora en la identificación de transacciones riesgosas. Estos resultados sólidos sentarán las bases para futuras mejoras y expansiones del sistema.
