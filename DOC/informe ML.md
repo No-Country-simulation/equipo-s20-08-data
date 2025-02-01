@@ -44,18 +44,18 @@ El dataset utilizado contiene información sobre transacciones, clientes y comer
 ## 3. Preprocesamiento de Datos<br>
 <b>El preprocesamiento incluye las siguientes etapas:</b><br>
 1.	<b>Conversión de Fecha de Nacimiento a Edad:</b> Se transforma la columna dob a age para obtener la edad del cliente.<br>
- <p align=center><img src=SRC/ml/uno.png width=300px heigth=200px><p>
+ <p align=center><img src=SRC/ml/unoml.png width=300px heigth=200px><p>
 2.	<b>Balanceo de clases:</b> Se toman en su totalidad los casos positivos de fraude y una muestra aleatoria del mismo tamaño de los casos negativos de fraude.<br>
-<p align=center><img src=SRC/ml/dos.png width=300px heigth=200px><p>
+<p align=center><img src=SRC/ml/dosml.png width=300px heigth=200px><p>
  
 3.	<b>Selección de Variables Relevantes:</b> Se eliminan columnas irrelevantes y se renombran algunas variables para mayor claridad.<br>
- <p align=center><img src=SRC/ml/tres.png width=300px heigth=200px><p>
+ <p align=center><img src=SRC/ml/tresml.png width=300px heigth=200px><p>
 4.	<b>división de variables categóricas y numéricas:</b> Se separan las variables de texto y numericas.<br>
- <p align=center><img src=SRC/ml/cuatro.png width=300px heigth=200px><p>
+ <p align=center><img src=SRC/ml/cuatroml.png width=300px heigth=200px><p>
 5.	<b>Codificación de Variables Categóricas:</b> Se convierte la variable gender y category en formato numérico usando OneHotEncoder.<br>
- <p align=center><img src=SRC/ml/cinco.png width=300px heigth=200px><p>
+ <p align=center><img src=SRC/ml/cincoml.png width=300px heigth=200px><p>
 6.	<b>Estandarización de las variables Numéricas:</b> Se ponen todas la varibales numéricas en la misma escala usando StandardScaler.<br>
- <p align=center><img src=SRC/ml/seis.png width=300px heigth=200px><p>
+ <p align=center><img src=SRC/ml/seisml.png width=300px heigth=200px><p>
 <b>Dataset para entrenamiento:</b> <br>
 •	<b>Datos del Cliente:</b><br>
 	gender, lat, long, city_pop, dob(convertida en edad age).<br>
@@ -70,23 +70,23 @@ merch_lat, merch_long, merchant_num_trans_1_day, merchant_num_trans_7_day, merch
 <b>is_fraud:</b> Variable binaria que indica si la transacción es fraudulenta (1) o no (0).<br>
 ## 4. División del Conjunto de Datos<br>
 Se divide el dataset en conjunto de entrenamiento y prueba para evaluar el modelo, 80% para entrenamiento y 20% para prueba.<br>
- <p align=center><img src=SRC/ml/siete.png width=300px heigth=200px><p>
+ <p align=center><img src=SRC/ml/sieteml.png width=300px heigth=200px><p>
 ## 5. Construcción del Modelo<br>
 Primero se construyó un modelo básico de regresión logística para determinar si las variables nos dan suficiente información: 
-<p align=center><img src=SRC/ml/ocho.png width=300px heigth=200px><p>
+<p align=center><img src=SRC/ml/ochoml.png width=300px heigth=200px><p>
 Teniendo como resultado un:<br>
 <b>Accuracy:</b> 0.83<br>
 <b>Precision:</b> 0.89<br>
 <b>Recall:</b> 0.75<br><br>
 Con estos resultados se procedió a usar la librería pycaret para determinar el mejor modelo:
- <p align=center><img src=SRC/ml/nueve.png width=300px heigth=200px><p>
+ <p align=center><img src=SRC/ml/nueveml.png width=300px heigth=200px><p>
  <br>
- <p align=center><img src=SRC/ml/diez.png width=600px heigth=600px><p>
+ <p align=center><img src=SRC/ml/diezml.png width=600px heigth=600px><p>
  En este caso fue <b>lightgbm </b>(Light Gradient Boosting Machine) con:<br>
 <b>Accuracy: 0.93<br></b>
 <b>Precision: 0.93<br></b>
 <b>Recall: 0.93<br></b>
- <p align=center><img src=SRC/ml/once.png width=600px heigth=600px><p>
+ <p align=center><img src=SRC/ml/onceml.png width=600px heigth=600px><p>
 ## <b>6. Evaluación del Modelo<br></b>
 Se analizan métricas de rendimiento:<br>
 <b>Accuracy</b> (0.9328)<br>
@@ -98,7 +98,7 @@ Indica que el modelo identifica el 93.28% de los casos positivos correctamente. 
 <b>Precisión (0.9328)<br></b>
 Significa que el 93.28% de los casos clasificados como positivos realmente son positivos. Buen resultado si se quiere minimizar falsos positivos.<br>
 Importancia de las características para el modelo<br>
- <p align=center><img src=SRC/ml/uno.png width=600px heigth=600px><p>
+ <p align=center><img src=SRC/ml/doceml.png width=600px heigth=600px><p>
 ## <b>7. Conclusiones<br></b>
 El modelo de machine learning desarrollado para la detección de transacciones fraudulentas ha demostrado un rendimiento excepcional, alcanzando métricas consistentes de 93.28% en accuracy, precisión y recall, junto con un AUC de 0.9842, lo que representa una mejora significativa respecto al modelo base de regresión logística. Este éxito se debe a la combinación de un preprocesamiento efectivo que incluye el balanceo de clases, la incorporación de variables categóricas transformadas, y la selección del algoritmo LightGBM mediante PyCaret. El modelo presenta un equilibrio óptimo entre la detección de fraudes y la minimización de falsos positivos, lo que lo hace altamente viable para su implementación en un entorno de producción
 
