@@ -1,4 +1,4 @@
-### Detección de Fraude en Transacciones Financieras: Un Enfoque Basado en Análiis de Datos y Machine Learning
+### Detección de Fraude en Transacciones Financieras: Un Enfoque Basado en Análisis de Datos y Machine Learning
 ### Análisis Financiero - Sistema de Deteccion de Fraudes 
 <p align=center><img src=SRC/img/sup.jpg width=900px heigth=100px><p>
 
@@ -34,11 +34,26 @@
 
 </div>
 
+
+## 🎯 Objetivos
+•	Desarrollar un modelo de machine learning preciso para detectar transacciones fraudulentas.
+•	Crear un tablero interactivo en Power BI para visualizar los datos y los resultados del modelo.
+•	Desplegar el modelo en una aplicación web que permita realizar un análisis en tiempo real de una transacción.
+
+
 ## Metodologia 📖
+El fraude financiero es una amenaza constante en el mundo digital. Este proyecto explora cómo la ciencia de datos puede ayudar a prevenir este tipo de delitos. A través de un enfoque basado en la metodología CRISP-DM, se desarrolla un modelo capaz de identificar transacciones sospechosas y proteger a los usuarios. <br>Al aplicar la metodología tenemos:<br>
+1.	Recopilación de datos: Se recopilaron datos históricos de transacciones financieras de diversas fuentes.
+2.	Preprocesamiento de datos: Los datos fueron limpiados, transformados y preparados para el entrenamiento del modelo.
+3.	Exploración de datos (EDA): Se realizó un análisis exploratorio de los datos para identificar patrones y características relevantes.
+4.	Modelado: Se entrenó un modelo de clasificación utilizando algoritmos como: ##Agregar--- Random Forest, XGBoost o redes neuronales.
+5.	Evaluación del modelo: Se evaluó el rendimiento del modelo utilizando métricas como precisión, recall, F1-score y matriz de confusión.
+6.	Despliegue: El modelo se desplegó en una aplicación web utilizando Flask y se integró con un tablero en Power BI para visualizar los 
 
 Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Metodología](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/metodologia.md)
 
 ## Esquema General de Trabajo 
+Este documento presenta un proyecto de detección de fraudes en transacciones financieras, siguiendo rigurosamente la metodología CRISP-DM. Desde la comprensión del negocio hasta el despliegue del modelo, se detalla cada una de las fases del proyecto, ofreciendo una visión completa del proceso de desarrollo de un modelo de machine learning.<br>
 Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Esquema General de Trabajo](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/Esquema_General_de_trabajo.md)
 
 <br> 
@@ -47,10 +62,6 @@ Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [E
 Introducción
 Este proyecto tiene como objetivo desarrollar un sistema de detección de fraudes en transacciones financieras utilizando técnicas de machine learning. El sistema se basa en un conjunto de datos históricos de transacciones y emplea algoritmos de clasificación para identificar patrones asociados con actividades fraudulentas y cuenta con un tablero interactivo desarrollado en Power BI para visualizar los resultados y un modelo de clasificación desplegado en una aplicación web.
 
-## 🎯 Objetivos
-•	Desarrollar un modelo de machine learning preciso para detectar transacciones fraudulentas.
-•	Crear un tablero interactivo en Power BI para visualizar los datos y los resultados del modelo.
-•	Desplegar el modelo en una aplicación web que permita realizar un análisis en tiempo real de una transacción.
 
 ## Tecnologías✔🛠️
 
@@ -85,10 +96,6 @@ Este proyecto tiene como objetivo desarrollar un sistema de detección de fraude
 
  
 
-
-
-
-
 ### ➡️ Estructura del Proyecto
 La estructura de directorios se plantea: 
 
@@ -104,15 +111,6 @@ La estructura de directorios se plantea:
         ├── visualizacion.pbix         # Visualización interactiva de los resultados (Power BI)
         └── ml.ipynb                   # Modelado predictivo usando Machine Learning
 
-
-Metodología
-1.	Recopilación de datos: Se recopilaron datos históricos de transacciones financieras de diversas fuentes.
-2.	Preprocesamiento de datos: Los datos fueron limpiados, transformados y preparados para el entrenamiento del modelo.
-3.	Exploración de datos (EDA): Se realizó un análisis exploratorio de los datos para identificar patrones y características relevantes.
-4.	Modelado: Se entrenó un modelo de clasificación utilizando algoritmos como: ##Agregar--- Random Forest, XGBoost o redes neuronales.
-5.	Evaluación del modelo: Se evaluó el rendimiento del modelo utilizando métricas como precisión, recall, F1-score y matriz de confusión.
-6.	Despliegue: El modelo se desplegó en una aplicación web utilizando Streamlit y se integró con un tablero en Power BI para visualizar los resultados.
-Resultados
 
 
 
@@ -145,6 +143,12 @@ El análisis de los datos en Power Bi, se implementa mediante un dashboard inter
 - agregar
 - agregar
 
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Esquema General de Trabajo](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/informeML.md)
+
+## 📌Referencias
+Este proyecto ha alcanzado con éxito su MVP, demostrando la viabilidad de un modelo de detección de fraudes basado en LightGBM. El tablero de Power BI proporciona una visión clara de las características clave asociadas con transacciones fraudulentas, y el modelo ha mostrado una precisión prometedora en la identificación de transacciones riesgosas. Estos resultados sólidos sentarán las bases para futuras mejoras y expansiones del sistema.
+
+
 ## 📈Futuros Desarrollos
 
 El presente proyecto constituye un punto de partida en la implementación de Técnicas de análisis de Ciencia de Datos e Intelegencia Artificial y hace posible a futuro ampliar y mejorar sus funcionalidades, además de incorporar nuevas caracteristicas que permitan incrementar continuamente su calidad, entre estas podemos mencionar: 
@@ -154,8 +158,7 @@ El presente proyecto constituye un punto de partida en la implementación de Té
 -   Mejorar la ubicación en tiempo real.
 -   Realizar procesamientos en parelelo para detectar semejanzas en los datos en tiempo real.
 
-## 📌Referencias
-El estado del proyecto esta en una fase ......
+
 
 
 ## 📌Presentación de los resultados del proyecto 🚀
