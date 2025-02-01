@@ -46,7 +46,7 @@ El dataset utilizado contiene información sobre transacciones, clientes y comer
 1.	<b>Conversión de Fecha de Nacimiento a Edad:</b> Se transforma la columna dob a age para obtener la edad del cliente.<br>
  <p align=center><img src=../SRC/ml/unoml.png width=400px heigth=400px><p>
 2.	<b>Balanceo de clases:</b> Se toman en su totalidad los casos positivos de fraude y una muestra aleatoria del mismo tamaño de los casos negativos de fraude.<br>
-<p align=center><img src=../SRC/ml/dosml.png width=400px heigth=400px><p>
+<p align=center><img src=../SRC/ml/dosml.png width=400px heigth=600px><p>
  
 3.	<b>Selección de Variables Relevantes:</b> Se eliminan columnas irrelevantes y se renombran algunas variables para mayor claridad.<br>
  <p align=center><img src=../SRC/ml/tresml.png width=400px heigth=400px><p>
