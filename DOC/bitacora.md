@@ -15,4 +15,10 @@ Nuestro proyecto se beneficia de una gestión transparente y colaborativa gracia
 En el siguiente link puedes ver el desarrollo de nuestras actividades en nuestro tablero:
 https://trello.com/invite/b/6784200220e1b8cd6a8a184e/ATTI4af62bc6bb9ae0b16dd7f5e05426b2182A2FC60E/nc-data-bi2024
 
+
 ## Reuniones
+Las reuniones se implentarán, adecuándolas a los tiempos y medios de los cuales se disponen en el equipo. <br>
+-Acuerdo de horarios via whatsapp
+-reuniones via google meet
+
+
