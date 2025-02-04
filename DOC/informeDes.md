@@ -26,4 +26,4 @@ Esta interfaz de usuario proporciona una visión integral del desempeño de nues
 
 <p align=center><img src=../SRC/des/bi-cuatro.png width=600px heigth=600px><p>
 
-*** En resumen, la herramienta de visualización proporciona una visión clara y concisa del desempeño del modelo de detección de fraudes. Los resultados obtenidos son prometedores y sugieren que el modelo puede ser una herramienta valiosa para combatir el fraude financiero. ***
+<strong>En resumen, la herramienta de visualización proporciona una visión clara y concisa del desempeño del modelo de detección de fraudes. Los resultados obtenidos son prometedores y sugieren que el modelo puede ser una herramienta valiosa para combatir el fraude financiero. </strong>
