@@ -133,7 +133,7 @@ El análisis de los datos en Power Bi, se implementa mediante un dashboard inter
 • Caracteristicas de transaciones fraudulentas
 •	Regiones geográficas con mayor exposición a transacciones fraudulentas
 
-Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Informe EDA](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/InformePBI.md)
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Informe BI](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/InformePBI.md)
 
 ## ➡️Resultados Esperados - Python
 
@@ -156,6 +156,11 @@ El objetivo final es desarrollar un modelo de machine learning capaz de detectar
 - Mejorar continuamente: Aprender de nuevos datos y adaptarse a las evoluciones en las técnicas de fraude.<br>
 
 Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Informe ML](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/informeML.md)
+
+
+## ➡️Depliegue Modelo
+El despliegue final del modelo se realiza sobre una aplicación web que permite visualizar el procesamiento de transacciones en tiempo real, determinando de acuerdo a sus características si es una posible transacción fraudulenta o no.<br>
+Puedes encontrar mucho más sobre el despliegue de este proyecto en la sección [Informe WEB](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/informeDes.md)
 
 ## 📌Referencias
 Este proyecto ha alcanzado con éxito su MVP, demostrando la viabilidad de un modelo de detección de fraudes basado en LightGBM. El tablero de Power BI proporciona una visión clara de las características clave asociadas con transacciones fraudulentas, y el modelo ha mostrado una precisión prometedora en la identificación de transacciones riesgosas. Estos resultados sólidos sentarán las bases para futuras mejoras y expansiones del sistema.
