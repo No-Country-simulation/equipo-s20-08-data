@@ -115,8 +115,6 @@ Para el proyecto se presenta la siquiente estructura de directorios:
     │
     ├── DOC/                           # Informes documentados
     │                     
-    ├── EDA.ipynb                      # Análisis exploratorio de los datos (EDA)
-    │  
     ├── MODEL ML                       # Modelado predictivo usando Machine Learning
     │  
     ├── TABLERO                        # Visualización interactiva de los resultados (Power BI)
@@ -130,10 +128,12 @@ Para el proyecto se presenta la siquiente estructura de directorios:
 
 El análisis de los datos en Power Bi, se implementa mediante un dashboard interactivo que permite visualizar:
 
-- agregar.
-- agregar.
-- agregars.
-- agregar.
+•	Tendencias y variaciones temporales de las transacciones
+• Perfiles de clientes
+• Caracteristicas de transaciones fraudulentas
+•	Regiones geográficas con mayor exposición a transacciones fraudulentas
+
+Puedes encontrar mucho más sobre la gestión de este proyecto en la sección [Informe EDA](https://github.com/No-Country-simulation/equipo-s20-08-data/blob/main/DOC/InformePBI.md)
 
 ## ➡️Resultados Esperados - Python
 
