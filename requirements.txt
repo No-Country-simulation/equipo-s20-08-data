@@ -1,0 +1,10 @@
+# Flask y sus dependencias
+Flask==2.3.2
+Flask-Cors==3.0.10
+
+# Pandas y NumPy
+pandas==2.0.3
+numpy==1.23.5
+
+# PyCaret
+pycaret==3.0.0

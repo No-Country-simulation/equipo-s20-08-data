@@ -121,6 +121,14 @@ Para el proyecto se presenta la siquiente estructura de directorios:
     │  
     └── SRC                            # Imágenes utilizadas
 
+## ➡️Como Ejecutar el proyecto
+ Para ejecutar el proyecto siga los siguientes pasos:    <br>                                                       
+
+|1| Clonar el proyecto         | https://github.com/No-Country-simulation/equipo-s20-08-data.git |<br>
+|3| Instalar dependencias      | pip install -r requirements.txt                                 |<br>
+|4| Ejecutar la aplicacion     | python app.py                                                   |<br>
+|5| Visualizar resultados      | main.html                                                       |<br>
+
 
 
 
