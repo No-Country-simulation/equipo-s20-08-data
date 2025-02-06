@@ -188,15 +188,10 @@ El presente proyecto constituye un punto de partida en la implementación de Té
 
 ## 📌Presentación de los resultados del proyecto 🚀
 
-</head>
-<body>
-    <div class="container">
-        <p><h2>Link a la presentación final</h2></p>
-        <h2><a class="button" href="https:......................" target="_blank">Ver Presentación</a></h2>
-      <p><h2>Link al Dashboard</h2></p>
-        <h2><a class="button" href="--------link al tablero------- " target="_blank">Ver Tablero</a></h2>
-  </body>
+
+
+    
+[Proyecto No Country - Tablero](https://github.com/No-Country-simulation/equipo-s20-08-data/)
 
   
-![Proyecto No Country - Detecciòn de Fraude](https://github.com/No-Country-simulation/equipo-s20-08-data/tree/main)
-</html>
+[Proyecto No Country - Detecciòn de Fraude](https://github.com/No-Country-simulation/equipo-s20-08-data/)
