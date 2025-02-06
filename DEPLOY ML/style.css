@@ -1,0 +1,174 @@
+body {
+font-family: Arial, sans-serif;
+margin: 1px;
+}
+h1 {
+font-size: 2em;
+margin-bottom: 20px;
+color: #161616;
+font-weight: bold;
+
+
+}
+
+
+.container {
+max-width: 1200px;
+margin: auto;
+}
+.grid {
+display: grid;
+gap: 18px; /* Aplica espaciado tanto horizontal como vertical */
+}
+.grid-cols-3 {
+grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-2 {
+grid-template-columns: repeat(2, 1fr);
+}
+.card {
+position: relative; /* Necesario para posicionar elementos hijos con posición absoluta */
+border: 1px solid #e0e7ff;
+border-radius: 8px;
+padding: 16px;
+margin-top: 20px;
+background-color: #f8fafc;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+font-size: 1.14em;
+font-weight: bold;
+display: flex;
+align-items: center; /* Centra verticalmente el texto e ícono */
+gap: 4px; /* Añade espacio entre el ícono y el texto */
+margin-bottom: 1rem;
+}
+
+
+.icon {
+    font-size: 1em; /* Ajusta el tamaño del ícono si es necesario */
+    display: inline-block; /* Asegura que el ícono sea tratado como un elemento en línea */
+}
+.icon2 {
+    font-size: 1em; /* Ajusta el tamaño del ícono si es necesario */
+    display: inline-block; /* Asegura que el ícono sea tratado como un elemento en línea */
+    color: blue;
+}
+.icon3 {
+    font-size: 1em; /* Ajusta el tamaño del ícono si es necesario */
+    display: inline-block; /* Asegura que el ícono sea tratado como un elemento en línea */
+    color: red;
+}
+.icon4 {
+    font-size: 1em; /* Ajusta el tamaño del ícono si es necesario */
+    display: inline-block; /* Asegura que el ícono sea tratado como un elemento en línea */
+    color: green;
+}
+
+.transaction-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.transaction-detail .label {
+    font-size: 1em;
+    color: #4a5568;
+}
+
+.transaction-detail .value {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.badge {
+    position: absolute; /* Posiciona la badge dentro de la tarjeta */
+    top: 16px; /* Alinea verticalmente con el padding de la tarjeta */
+    right: 16px; /* Alinea horizontalmente con el padding de la tarjeta */
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap; /* Evita que el texto se desborde a la siguiente línea */
+}
+
+.badge.fraudulent {
+    background-color: #fed7d7;
+    color: #c53030;
+}
+
+.badge.legitimate {
+    background-color: #c6f6d5;
+    color: #2f855a;
+}
+.chart {
+width: 100%;
+height: 300px;
+border: 1px solid #ccc;
+}
+.transaction {
+display: flex;
+justify-content: space-between;
+border: 1px solid #ccc;
+padding: 10px;
+border-radius: 5px;
+}
+.value {
+font-size: 2em; /* Ajusta el tamaño si es necesario */
+font-weight: bold;
+}
+.blue {
+color: blue; /* Azul para valores neutrales */
+}
+.red {
+color: red; /* Rojo para valores de fraude */
+}
+.green {
+color: green; /* Verde para valores legítimos */
+}
+
+
+.bg-white {
+    background-color: white;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f3f4f6;
+}
+
+th {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+    background-color: #fee2e2;
+}
+
+.text-red {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.text-yellow {
+    color: #d97706;
+    font-weight: bold;
+}
