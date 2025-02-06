@@ -191,7 +191,7 @@ El presente proyecto constituye un punto de partida en la implementación de Té
 
 
     
-[Proyecto No Country - Tablero](https://github.com/No-Country-simulation/equipo-s20-08-data/)
+[Proyecto No Country - Tablero](https://app.powerbi.com/view?r=eyJrIjoiMmU0MDE3ODQtMzdlYy00MmZmLThkYzMtNjUzZmZkYjE0NTgzIiwidCI6Ijk4MjAxZmVmLWQ5ZjYtNGU2OC04NGY1LWMyNzA1MDc0ZTM0MiIsImMiOjR9&pageName=5f4995cda04b8ea05b05)
 
   
 [Proyecto No Country - Detecciòn de Fraude](https://github.com/No-Country-simulation/equipo-s20-08-data/)
